@@ -1,0 +1,20 @@
+﻿@model DadosQR;
+@{
+    ViewData["Title"] = "Home Page";
+    DadosQR dados = new DadosQR();
+
+}
+
+<div class="text-center">
+    <p>
+        <h1 class="display-4">Welcome</h1>
+    </p>
+
+    <form class="form-control" asp-action="GerarQR">
+        <label>Informe o texto:</label>
+        <input type="text" name="texto" />
+        <button class="btn-primary" >Gerar</button>
+    </form>
+
+    <partial name="_imagem" model="Model" />
+</div>
